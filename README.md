@@ -7,17 +7,34 @@
 # installation
 
 <b>Install via composer</b>
-[code]composer require tymon/jwt-auth[/code]
+
+```sh
+composer require tymon/jwt-auth
+```
 
 <b>Publish the config</b>
-[code]php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"[/code]
+
+```sh
+php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
+```
 
 <b>Generate secret key</b>
-[code]php artisan jwt:secret[/code]
+
+```sh
+php artisan jwt:secret
+```
+
 This will update your .env file with something like JWT_SECRET=foobar
 
 ## author
 
 <b><a href='https://www.ihsanbagus.com/'>Ihsan Bagus</a></b> 🐱‍🏍
 
-## 2022
+## method
+
+```
+POST https://localhost:8000/api/auth/login
+POST https://localhost:8000/api/auth/logout
+POST https://localhost:8000/api/auth/refresh
+POST https://localhost:8000/api/auth/me
+```
